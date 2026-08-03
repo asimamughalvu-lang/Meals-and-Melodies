@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Brand palette — vibrant orange/green/purple in place of the old clinical cyan/white */
+  --color-brand-primary: #f2711c; /* orange – main accent, CTAs, highlights */
+  --color-brand-primary-dark: #c9550c;
+  --color-brand-secondary: #2e9e5b; /* green – secondary accent */
+  --color-brand-secondary-dark: #1f7a45;
+  --color-brand-accent: #8b5fbf; /* purple – tertiary accent */
+  --color-brand-accent-dark: #6d3fa0;
+  --color-brand-tint-orange: #fff1e2;
+  --color-brand-tint-green: #e7f6ec;
+  --color-brand-tint-purple: #f2ecfa;
+  --color-neutral-dark: #3a3f46;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-poppins);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), sans-serif;
+}
