@@ -31,8 +31,8 @@ export default function PersonalisedCare({
   cardParagraph = "Providing care that has been completely personalised for every individual is important to us here at HomeCaring. We recognise every individual as the unique person that they are, and it's why we avoid a solution that is \"one size fits all\". Our care plans are person-centred, not plan-centred, which means that you get a service that shines a light on what you need and delivers a solution for it.",
 }: PersonalisedCareProps) {
   return (
-    <section className="px-4 py-10 sm:px-6 sm:py-16 lg:px-32  ">
-      <div
+    <section >
+      {/* <div
         className="rounded-lg"
         style={{ backgroundColor: "rgba(229, 249, 251, 0.4)" }}
       >
@@ -65,7 +65,7 @@ export default function PersonalisedCare({
           </ul>
           <p className={bodyText}>{paragraph3}</p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

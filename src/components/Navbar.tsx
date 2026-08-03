@@ -37,7 +37,7 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50 md:text-base"
+                className="text-sm font-medium text-zinc-600 transition-colors hover:text-[#F2711C] dark:text-zinc-400 dark:hover:text-[#F2711C] md:text-base"
               >
                 {label}
               </Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
               <Link
                 href={href}
                 onClick={() => setOpen(false)}
-                className="block border-b border-zinc-100 px-6 py-4 text-base font-medium text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-950 dark:border-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-50"
+                className="block border-b border-zinc-100 px-6 py-4 text-base font-medium text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-[#F2711C] dark:border-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-[#F2711C]"
               >
                 {label}
               </Link>

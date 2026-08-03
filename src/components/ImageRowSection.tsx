@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { StaticImageData } from "next/image";
-import socialIndoor from "@/assets/WhatsApp Image 2026-03-18 at 11.23.52 AM.jpeg";
 
 type ImageRowSectionProps = {
   heading?: string;
@@ -10,21 +9,12 @@ type ImageRowSectionProps = {
   paragraph2?: string | React.ReactNode;
   buttonLabel?: string;
   buttonHref?: string;
-  images?: { src: string | StaticImageData; alt: string }[];
+  images?: { src: string | StaticImageData; alt: string; objectPosition?: string }[];
 };
-
-// const defaultImages = [
-//   { src: socialOutdoor, alt: "Seniors enjoying a social meal outdoors at a picnic table" },
-//   { src: socialOutdoor, alt: "Seniors enjoying a social meal outdoors at a picnic table" },
-//   { src: socialOutdoor, alt: "Seniors enjoying a social meal outdoors at a picnic table" },
-//   { src: socialIndoor, alt: "Seniors sharing a communal meal indoors, raising glasses in a toast" },
-// ];
 
 const defaultImages = [
   { src: "/Elderly group table outdoors.png", alt: "Seniors enjoying a social meal outdoors at a picnic table" },
-  // { src: "/Elderly group under tree.png", alt: "Seniors enjoying a social meal outdoors at a picnic table" },
-  // { src: "/Marquee long table .png", alt: "Seniors enjoying a social meal outdoors at a picnic table"},
-  { src: socialIndoor, alt: "Seniors sharing a communal meal indoors, raising glasses in a toast" },
+  { src: "/services.png", alt: "Meals and Melodies chef preparing a meal indoors in the kitchen", objectPosition: "28% 20%" },
 ];
 
 export default function ImageRowSection({
@@ -66,6 +56,7 @@ export default function ImageRowSection({
                 alt={img.alt}
                 fill
                 className="object-cover"
+                style={img.objectPosition ? { objectPosition: img.objectPosition } : undefined}
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw"
               />
             </div>
