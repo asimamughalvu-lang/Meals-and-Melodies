@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 !flex w-full items-center justify-between border-b border-zinc-200 bg-white/95 px-4 py-2 backdrop-blur dark:border-zinc-800 dark:bg-black/95 sm:px-6 md:px-10">
+      <nav className="sticky top-0 z-50 !flex w-full items-center justify-between border-b border-zinc-200 bg-[#FFEBD9]/95 px-4 py-2 backdrop-blur dark:border-zinc-800 dark:bg-black/95 sm:px-6 md:px-10">
         <Link
           href="/"
           className="flex items-center gap-2"

@@ -79,7 +79,7 @@ export default function AboutSection({
   imageAlt = "About us - care and support",
 }: AboutSectionProps) {
   return (
-    <section className="w-full min-h-screen  bg-white py-10 dark:bg-zinc-950  sm:py-16 ">
+    <section className="w-full min-h-screen  py-10 dark:bg-zinc-950  sm:py-16 ">
       <div className="mx-auto grid max-w-8xl gap-8 sm:gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-12 sm:px-8 lg:px-32">
         {/* Left: heading, paragraph, text items, buttons */}
         <div className="flex flex-col">

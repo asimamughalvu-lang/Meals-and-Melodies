@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
@@ -26,7 +26,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://player.vimeo.com" />
         <link rel="dns-prefetch" href="https://player.vimeo.com" />
       </head>
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`${montserrat.variable} antialiased bg-[#FFEBD9]`}>
         <Navbar />
         {children}
         <Footer />

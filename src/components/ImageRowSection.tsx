@@ -9,12 +9,23 @@ type ImageRowSectionProps = {
   paragraph2?: string | React.ReactNode;
   buttonLabel?: string;
   buttonHref?: string;
-  images?: { src: string | StaticImageData; alt: string; objectPosition?: string }[];
+  images?: {
+    src: string | StaticImageData;
+    alt: string;
+    objectPosition?: string;
+  }[];
 };
 
 const defaultImages = [
-  { src: "/Elderly group table outdoors.png", alt: "Seniors enjoying a social meal outdoors at a picnic table" },
-  { src: "/services.png", alt: "Meals and Melodies chef preparing a meal indoors in the kitchen", objectPosition: "28% 20%" },
+  {
+    src: "/Elderly group table outdoors.png",
+    alt: "Seniors enjoying a social meal outdoors at a picnic table",
+  },
+  {
+    src: "/services.png",
+    alt: "Meals and Melodies chef preparing a meal indoors in the kitchen",
+    objectPosition: "28% 20%",
+  },
 ];
 
 export default function ImageRowSection({
@@ -22,13 +33,19 @@ export default function ImageRowSection({
   heading2 = " Delicious and Delightful Social Engagement",
 
   paragraph2 = "This is a social engagement and capacity-building enterprise that puts gastronomic and music first and foremost. No more boring outings!",
-  paragraph = (<>This is a social engagement and capacity-building enterprise that puts gastronomic and music first and foremost.<br /> No more boring outings!</>),
+  paragraph = (
+    <>
+      This is a social engagement and capacity-building enterprise that puts
+      gastronomic and music first and foremost.
+      <br /> No more boring outings!
+    </>
+  ),
   buttonLabel = "Get Started",
   buttonHref = "/services",
   images = defaultImages,
 }: ImageRowSectionProps) {
   return (
-    <section className="w-full bg-white px-4 py-12 dark:bg-zinc-950 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24 xl:px-32 xl:py-28">
+    <section className="w-full bg-[#FFEBD9] px-4 py-12 dark:bg-zinc-950 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24 xl:px-32 xl:py-28">
       <div className="mx-auto max-w-8xl space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12 xl:space-y-14">
         <h2 className="text-center text-2xl font-bold tracking-tight text-[#F2711C] dark:text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-[66px]">
           {heading2}
@@ -56,7 +73,11 @@ export default function ImageRowSection({
                 alt={img.alt}
                 fill
                 className="object-cover"
-                style={img.objectPosition ? { objectPosition: img.objectPosition } : undefined}
+                style={
+                  img.objectPosition
+                    ? { objectPosition: img.objectPosition }
+                    : undefined
+                }
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw"
               />
             </div>

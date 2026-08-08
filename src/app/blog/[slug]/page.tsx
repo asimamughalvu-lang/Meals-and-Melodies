@@ -32,7 +32,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const otherPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
 
   return (
-    <div className="min-h-screen font-sans">
+    <div className="min-h-screen bg-[#FFEBD9]">
       <section
         className="w-full px-4 py-14 sm:px-8 sm:py-16 lg:px-32"
         style={{ backgroundColor: "rgba(229, 249, 251, 0.40)" }}
@@ -95,7 +95,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </section>
 
       {otherPosts.length > 0 && (
-        <section className="w-full bg-zinc-50 px-4 py-12 sm:px-8 sm:py-16 lg:px-32">
+        <section className="w-full bg-[#FFEBD9] px-4 py-12 sm:px-8 sm:py-16 lg:px-32">
           <div className="mx-auto max-w-8xl">
             <h2 className="text-xl font-bold text-[#3A3F46] sm:text-2xl">
               More from the blog

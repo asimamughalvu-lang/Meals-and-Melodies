@@ -10,19 +10,18 @@ export const metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen font-sans">
+    <div className="min-h-screen bg-[#FFEBD9]">
       <section
         className="w-full px-4 py-14 sm:px-8 sm:py-16 lg:px-32"
         style={{ backgroundColor: "rgba(229, 249, 251, 0.40)" }}
       >
         <div className="mx-auto max-w-8xl text-center">
-          
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-[#3A3F46] sm:text-5xl lg:text-[66px]">
             Latest news from Val and Sandra
           </h1>
           <p className="mx-auto mt-6 max-w-4xl text-base leading-relaxed text-[#3A3F46] sm:text-lg">
-            Guides, behind-the-scenes moments and updates from the team
-            bringing food and live music together, one event at a time.
+            Guides, behind-the-scenes moments and updates from the team bringing
+            food and live music together, one event at a time.
           </p>
         </div>
       </section>

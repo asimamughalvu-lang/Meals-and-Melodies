@@ -43,7 +43,7 @@ export default function AboutSection({
   imageAlt = "About us - care and support",
 }: AboutSectionProps) {
   return (
-    <section className="w-full bg-white py-10 dark:bg-zinc-950  sm:py-16">
+    <section className="w-full py-10 dark:bg-zinc-950  sm:py-16">
       <div className="mx-auto grid max-w-8xl gap-8 sm:gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-12 sm:px-8 lg:px-32">
         {/* Left: heading, paragraph, text items, buttons */}
         <div className="flex flex-col ">
@@ -86,7 +86,7 @@ export default function AboutSection({
         {/* Right: image with decorative rotated div */}
         <div className="relative flex h-[300px] w-full items-center justify-center pb-12 sm:h-[380px] sm:pb-16 md:h-[460px] lg:h-[650px] lg:pb-24">
           <div className="relative h-full w-full">
-            <div className="relative z-10 h-full w-full overflow-hidden rounded-4xl bg-zinc-900">
+            <div className="relative z-10 h-full w-full overflow-hidden rounded-4xl bg-[#FFCD9B]">
               <Image
                 src={imageSrc}
                 alt={imageAlt}

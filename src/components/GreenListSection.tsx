@@ -155,7 +155,7 @@ export default function GreenListSection({
   paragraph = introParagraph,
 }: GreenListSectionProps) {
   return (
-    <section className="w-full bg-white dark:bg-zinc-950">
+    <section className="w-full bg-[#FFEBD9] dark:bg-zinc-950">
       {/* <div className="max-w-8xl    mx-auto  px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-14 lg:px-12 lg:py-16 xl:px-32 xl:py-20">
         <h2 className="text-center text-2xl font-bold tracking-tight text-[#2c2d2e] dark:text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-[66px]">
           {heading}
@@ -164,7 +164,7 @@ export default function GreenListSection({
           {paragraph}
         </p> */}
 
-        {/* <div className=" grid gap-x-4 sm:mt-10 sm:gap-x-6 md:grid-cols-2 md:gap-x-12 lg:gap-x-16">
+      {/* <div className=" grid gap-x-4 sm:mt-10 sm:gap-x-6 md:grid-cols-2 md:gap-x-12 lg:gap-x-16">
           <div className="flex flex-col">
             {column1.map((item, i) => (
               <RowItem key={i} item={item} />
@@ -177,7 +177,7 @@ export default function GreenListSection({
           </div>
         </div> */}
 
-        {/* <div className="mt-10 space-y-12 sm:mt-12 sm:space-y-14 md:mt-14 md:space-y-16 lg:mt-16 lg:space-y-20">
+      {/* <div className="mt-10 space-y-12 sm:mt-12 sm:space-y-14 md:mt-14 md:space-y-16 lg:mt-16 lg:space-y-20">
           {column1.slice(0, 2).map((item, i) => (
             <article key={i} className="space-y-4 sm:space-y-5">
               <h3 className="text-lg font-semibold text-[#3A3F46] dark:text-green-400 sm:text-xl md:text-2xl">
@@ -203,7 +203,6 @@ export default function GreenListSection({
           ))}
         </div> */}
 
-        
       {/* </div> */}
     </section>
   );
