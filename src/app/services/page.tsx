@@ -22,16 +22,15 @@ export const metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen font-sans">
+    <div className="min-h-screen font-sans sm:p-auto px-4">
       <ServicesSection />
       <PersonalisedCare />
       <WhatWeOfferService />
-       {/* <NdisService /> */}
-       <OfferCards/>
-       <Caring />
-       <Servicefaqs/>
-      <ImageWithOverlaySection /> 
-
+      {/* <NdisService /> */}
+      <OfferCards />
+      <Caring />
+      <Servicefaqs />
+      <ImageWithOverlaySection />
     </div>
   );
 }

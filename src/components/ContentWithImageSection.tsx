@@ -56,28 +56,25 @@ export default function ContentWithImageSection({
       <div className="mx-auto   grid max-w-8xl gap-8 sm:gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-12 sm:px-8 lg:px-32 ">
         {/* Left: heading, paragraph, sub-headings, buttons */}
         <div className=" flex-col ">
-          <h2 className="text-2xl font-bold tracking-tight text-[#F2711C] dark:text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-[66px]">
+          <h2 className="text-2xl text-center sm:text-left p-2 font-bold tracking-tight text-[#F2711C] dark:text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-[66px]">
             {heading2}
           </h2>
-          <p className="mt-3 text-base text-zinc-600 dark:text-zinc-400 sm:mt-4 sm:text-lg">
+          <p className="mt-3 text-base text-center sm:text-left p-2 text-zinc-600 dark:text-zinc-400 sm:mt-4 sm:text-lg">
             {paragraph}
           </p>
-          
-          <div className="mt-6 space-y-5 sm:mt-8 sm:space-y-6 ">
+
+          <div className="mt-6 space-y-5 sm:mt-8 sm:space-y-6 p-2">
             {subHeadings.map((item, i) => (
               <div key={i}>
-                <h3 className="text-lg font-semibold text-[#3A3F46] dark:text-green-400 sm:text-xl">
+                <h3 className="text-lg text-center sm:text-left font-semibold text-[#3A3F46] dark:text-green-400 sm:text-xl">
                   {item.title}
                 </h3>
-               
-                <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-[#3A3F46] dark:text-zinc-400 sm:mt-2 sm:text-base">
+
+                <p className="mt-1.5 text-center sm:text-left whitespace-pre-line text-sm leading-relaxed text-[#3A3F46] dark:text-zinc-400 sm:mt-2 sm:text-base">
                   {item.text}
                 </p>
-                
               </div>
             ))}
-
-
 
             {/* <h3 className="text-lg font-semibold text-[#3A3F46] dark:text-green-400 sm:text-xl">MEALS:</h3>
             <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-[#3A3F46] dark:text-zinc-400 sm:mt-2 sm:text-base">
@@ -95,18 +92,12 @@ export default function ContentWithImageSection({
             <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-[#3A3F46] dark:text-zinc-400 sm:mt-2 sm:text-base">
               Sandra Beynon is a seasoned vocalist, with over 50 years of performance experience.\n\nSandra continues to entertain audiences as a working musician in clubs, hotels and private functions.\n\nLucky for our clients, Sandra joins with Valerie as the musical component to this unique enterprise. Sandra loves nothing more than to sing some beautiful tunes and touch the hearts of her audience – the brain, at any age or stage, still gets fired up when a tune is recognised.
             </p> */}
-            
-
-           
-           
-
           </div>
 
-
-          <div className="mt-8 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
+          <div className="mt-8 flex flex-wrap gap-3 sm:justify-start justify-center sm:mt-10 sm:gap-4">
             <Link
               href={primaryButtonHref}
-              className="inline-flex items-center justify-center rounded-md px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90 sm:px-6 sm:py-3 sm:text-base"
+              className="inline-flex  items-center justify-center rounded-md px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90 sm:px-6 sm:py-3 sm:text-base"
               style={{ backgroundColor: "#F2711C" }}
             >
               {primaryButtonLabel}
