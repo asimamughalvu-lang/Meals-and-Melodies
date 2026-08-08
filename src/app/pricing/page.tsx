@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaCheckCircle } from "react-icons/fa";
-console.log("hhh")
+console.log("hhh");
 
 const pricingPlans = [
   {
@@ -58,7 +58,6 @@ export const metadata = {
 function IncludedInEveryPackage() {
   return (
     <div className="mt-6 border-t border-zinc-100 pt-6 text-left">
-     
       <p className="mt-2 text-sm leading-relaxed text-zinc-600 sm:text-base">
         <span className="font-semibold text-[#3A3F46]">Gourmet Catering: </span>
         Chef-prepared meals, and top quality vocal entertainment by an industry
@@ -70,7 +69,7 @@ function IncludedInEveryPackage() {
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen font-sans">
+    <div className="min-h-screen bg-[#FFEBD9] ">
       <section
         className="w-full px-4 py-14 sm:px-8 sm:py-16 lg:px-32"
         style={{ backgroundColor: "rgba(229, 249, 251, 0.40)" }}
@@ -80,10 +79,14 @@ export default function PricingPage() {
             Pricing
           </p>
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-[#3A3F46] sm:text-5xl lg:text-[66px]">
-          Premium Experiences Tailored to Your Community
+            Premium Experiences Tailored to Your Community
           </h1>
           <p className="mx-auto mt-6 max-w-4xl text-base leading-relaxed text-[#3A3F46] sm:text-lg">
-          We believe in providing exceptional value without the "one-size-fits-all" approach. Because every facility has different requirements—from group sizes to specific dietary needs and travel distances—we provide custom quotes to ensure you get the best possible experience for your budget.
+            We believe in providing exceptional value without the
+            "one-size-fits-all" approach. Because every facility has different
+            requirements—from group sizes to specific dietary needs and travel
+            distances—we provide custom quotes to ensure you get the best
+            possible experience for your budget.
           </p>
         </div>
       </section>
@@ -105,7 +108,9 @@ export default function PricingPage() {
                 </p>
               ) : null}
 
-              <h2 className="text-2xl font-bold text-[#3A3F46]">{plan.title}</h2>
+              <h2 className="text-2xl font-bold text-[#3A3F46]">
+                {plan.title}
+              </h2>
               <p className="mt-2 text-sm text-zinc-600">{plan.subtitle}</p>
 
               <div className="mt-5 flex items-end gap-1">

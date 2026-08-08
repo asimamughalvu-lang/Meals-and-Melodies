@@ -100,7 +100,7 @@ export default function LocationCardsSection({
   cards = defaultCards,
 }: LocationCardsSectionProps) {
   return (
-    <section className="w-full bg-white px-4 sm:px-6 md:px-8 lg:px-12 py-10 dark:bg-zinc-950  sm:py-14  md:py-16  lg:py-20">
+    <section className="w-full bg-[#FFEBD9] px-4 sm:px-6 md:px-8 lg:px-12 py-10 dark:bg-zinc-950  sm:py-14  md:py-16  lg:py-20">
       <div className="mx-auto w-full max-w-7xl">
         <h2 className="text-2xl font-bold tracking-tight text-[#F2711C] dark:text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-[66px]">
           {heading}
