@@ -23,10 +23,10 @@ export default function ImageWithOverlaySection({
       <div className="relative mx-auto flex w-full max-w-8xl flex-col items-stretch rounded-2xl px-4 sm:px-8 md:px-16 lg:flex-row lg:translate-x-[8%] lg:px-24">
         {/* Left: cyan div — mobile pe upar, desktop pe left */}
         <div
-          className="flex min-h-[380px] flex-1 flex-col justify-center gap-3 rounded-t-2xl px-6 py-8 z-50 sm:min-h-[300px] sm:gap-4 sm:px-8 sm:py-10 md:min-h-[320px] lg:min-w-[30%] lg:min-h-[400px] lg:rounded-tr-[275px] lg:rounded-bl-2xl lg:rounded-tl-2xl lg:px-10 lg:py-12 lg:gap-5"
+          className="flex min-h-[380px] flex-1 flex-col justify-center gap-3 rounded-t-2xl px-6 py-8 z-50 sm:min-h-[300px] sm:gap-4 sm:px-8 sm:py-10 md:min-h-[320px] lg:h-[480px] lg:min-w-[30%] lg:rounded-tr-[160px] lg:rounded-bl-2xl lg:rounded-tl-2xl lg:px-10 lg:py-12 lg:gap-5 xl:h-[550px]"
           style={{ backgroundColor: "#FFE3C2" }}
         >
-          <h2 className="text-xl font-bold leading-tight text-gray-600 sm:text-2xl md:text-4xl lg:text-5xl">
+          <h2 className="text-xl font-bold leading-tight text-gray-600 sm:text-2xl md:text-3xl lg:text-4xl">
             {heading}
           </h2>
           <p className="text-base font-bold leading-tight text-gray-600 sm:text-lg md:text-xl">
