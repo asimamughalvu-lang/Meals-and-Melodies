@@ -4,7 +4,7 @@ export type SubHeadingItem = {
   title: string;
   text: string;
 };
-console .log("AboutIntroSectionProps");
+
 
 type AboutIntroSectionProps = {
   heading?: string;
