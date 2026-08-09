@@ -75,7 +75,7 @@ export default function FaqsSection({
                 <button
                   type="button"
                   onClick={() => toggle(i)}
-                  className="flex w-full items-center justify-between gap-3 py-6 text-left hover:bg-gray-50 sm:gap-4 sm:py-8 md:py-10"
+                  className="flex w-full items-center justify-between gap-3 py-6 text-left hover:bg-gray-50 sm:gap-4 sm:py-8 md:py-10 px-4"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${i}`}
                   id={`faq-question-${i}`}
