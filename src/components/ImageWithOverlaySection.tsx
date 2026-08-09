@@ -18,7 +18,7 @@ export default function ImageWithOverlaySection({
   buttonHref = "/contact-us",
 }: ImageWithOverlaySectionProps) {
   return (
-    <section className="w-full overflow-hidden  py-10 sm:py-16">
+    <section className="w-full overflow-hidden bg-[#FFEBD9] py-10 sm:py-16">
       {/* max-w-6xl + mx-auto = block center; lg:translate-x-[8%] = image -20% overlap balance */}
       <div className="relative mx-auto flex w-full max-w-8xl flex-col items-stretch rounded-2xl px-4 sm:px-8 md:px-16 lg:flex-row lg:translate-x-[8%] lg:px-24">
         {/* Left: cyan div — mobile pe upar, desktop pe left */}
@@ -43,9 +43,7 @@ export default function ImageWithOverlaySection({
           </div>
         </div>
         {/* Image: mobile pe neeche full width, desktop pe 20% overlap */}
-        <div
-          className="relative h-[280px] w-full shrink-0 overflow-hidden rounded-b-2xl sm:h-[350px] md:h-[420px] lg:h-[480px] lg:w-[70%] lg:min-w-[280px] lg:-translate-x-[20%] lg:rounded-r-2xl xl:h-[550px]"
-        >
+        <div className="relative h-[280px] w-full shrink-0 overflow-hidden rounded-b-2xl sm:h-[350px] md:h-[420px] lg:h-[480px] lg:w-[70%] lg:min-w-[280px] lg:-translate-x-[20%] lg:rounded-r-2xl xl:h-[550px]">
           <Image
             src={imageSrc}
             alt={imageAlt}

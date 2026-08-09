@@ -38,28 +38,28 @@ export default function AboutSection({
   paragraph = "Imagine having a voice that’s always ready, always perfect, and always aligned with your vision. No delays, no limitations — just pure expression whenever you need it. It brings your ideas to life instantly, turning your thoughts into melodies that sound as real and powerful as human emotion itself.",
   paragraph3 = "It’s like having a voice that’s always ready, always perfect, and always aligned with your vision. No delays, no limitations — just pure expression whenever you need it. It brings your ideas to life instantly, turning your thoughts into melodies that sound as real and powerful as human emotion itself.",
   paragraph4 = "In a fast-moving digital world, standing out is everything. A singer gives you the edge — the ability to create, adapt, and inspire without limits. It empowers you to push boundaries, experiment freely, and bring your vision to life in ways that feel authentic, bold, and truly timeless.",
- 
+
   imageSrc = "/singer.png",
   imageAlt = "About us - care and support",
 }: AboutSectionProps) {
   return (
-    <section className="w-full bg-white py-10 dark:bg-zinc-950  sm:py-16">
+    <section className="w-full py-10 dark:bg-zinc-950  sm:py-16">
       <div className="mx-auto grid max-w-8xl gap-8 sm:gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-12 sm:px-8 lg:px-32">
         {/* Left: heading, paragraph, text items, buttons */}
         <div className="flex flex-col ">
-          <h2 className="text-2xl font-bold tracking-tight text-[#F2711C] dark:text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-[66px]">
+          <h2 className="text-2xl sm:text-left text-center font-bold tracking-tight text-[#F2711C] dark:text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-[66px]">
             {heading}
           </h2>
-          <p className="mt-16 text-base text-zinc-600 dark:text-zinc-400 sm:mt-4 sm:text-lg">
+          <p className="mt-16 sm:text-left text-center text-base text-zinc-600 dark:text-zinc-400 sm:mt-4 sm:text-lg">
             {paragraph}
           </p>
-          <p className="text-base mt-14 text-zinc-600 dark:text-zinc-400 sm:mt-4 sm:text-lg">
+          <p className="text-base sm:text-left text-center mt-14 text-zinc-600 dark:text-zinc-400 sm:mt-4 sm:text-lg">
             {paragraph2}
           </p>
-          <p className="text-base mt-14 text-zinc-600 dark:text-zinc-400 sm:mt-4 sm:text-lg">
+          <p className="text-base sm:text-left text-center mt-14 text-zinc-600 dark:text-zinc-400 sm:mt-4 sm:text-lg">
             {paragraph3}
           </p>
-          <p className="text-base mt-14 text-zinc-600 dark:text-zinc-400 sm:mt-4 sm:text-lg">
+          <p className="text-base sm:text-left text-center mt-14 text-zinc-600 dark:text-zinc-400 sm:mt-4 sm:text-lg">
             {paragraph4}
           </p>
           {/* <div className="mt-6 space-y-5 sm:mt-8 sm:space-y-6">
@@ -86,7 +86,7 @@ export default function AboutSection({
         {/* Right: image with decorative rotated div */}
         <div className="relative flex h-[300px] w-full items-center justify-center pb-12 sm:h-[380px] sm:pb-16 md:h-[460px] lg:h-[650px] lg:pb-24">
           <div className="relative h-full w-full">
-            <div className="relative z-10 h-full w-full overflow-hidden rounded-4xl bg-zinc-900">
+            <div className="relative z-10 h-full w-full overflow-hidden rounded-4xl bg-[#FFCD9B]">
               <Image
                 src={imageSrc}
                 alt={imageAlt}

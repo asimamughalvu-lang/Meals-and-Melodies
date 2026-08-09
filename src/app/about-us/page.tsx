@@ -13,14 +13,13 @@ export const metadata = {
 
 export default function AboutUsPage() {
   return (
-    <div className="min-h-screen font-sans">
+    <div className="min-h-screen  sm:p-auto px-4 bg-[#FFEBD9]">
       <AboutSection />
       <CardSection />
       <AboutIntroSection />
       <OurValues />
       <WhatWeOffer />
       <ImageWithOverlaySection />
-
     </div>
   );
 }

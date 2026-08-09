@@ -16,28 +16,30 @@ type CardSectionProps = {
 
 const defaultCards: CardItem[] = [
   {
-    iconSrc: "https://www.homecaring.com.au/wp-content/uploads/2025/06/house-heart.png",
+    iconSrc:
+      "https://www.homecaring.com.au/wp-content/uploads/2025/06/house-heart.png",
     iconAlt: "Support",
     heading: "I need to find fun and engaging social outings for elders",
     buttonLabel: "Get Started",
     buttonHref: "/services",
   },
 
-   {
-    iconSrc: "https://www.homecaring.com.au/wp-content/uploads/2025/06/people-icon.png",
+  {
+    iconSrc:
+      "https://www.homecaring.com.au/wp-content/uploads/2025/06/people-icon.png",
     iconAlt: "Home care",
     heading: "I need to find fun and engaging social outings for elders",
     buttonLabel: "Get Started",
     buttonHref: "/services",
   },
   {
-    iconSrc: "https://www.homecaring.com.au/wp-content/uploads/2025/06/plus-icon.png",
+    iconSrc:
+      "https://www.homecaring.com.au/wp-content/uploads/2025/06/plus-icon.png",
     iconAlt: "Support",
     heading: "I need to find capacity-building activities for my NDIS client",
     buttonLabel: "Get Started",
     buttonHref: "/services",
   },
- 
 ];
 
 export default function CardSection({
@@ -45,7 +47,7 @@ export default function CardSection({
   cards = defaultCards,
 }: CardSectionProps) {
   return (
-    <section className="w-full bg-zinc-50 py-10 dark:bg-zinc-900 sm:py-16">
+    <section className="w-full bg-[#FFEBD9] py-10 dark:bg-zinc-900 sm:py-16">
       {/* <div className="mx-auto max-w-8xl sm:px-8 lg:px-32">
         <h2 className="text-start text-2xl font-bold tracking-tight text-[#F2711C] dark:text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-[66px]">
           {heading}

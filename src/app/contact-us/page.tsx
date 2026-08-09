@@ -92,18 +92,18 @@ export default function ContactUs({ onClose }: { onClose?: () => void }) {
             venue === "your"
               ? "Your Venue"
               : venue === "offsite"
-              ? "Off-site location"
-              : "Not specified",
+                ? "Off-site location"
+                : "Not specified",
           themed:
             themed === "yes" ? "Yes" : themed === "no" ? "No" : "Not specified",
         },
-        { publicKey: EMAILJS_PUBLIC_KEY }
+        { publicKey: EMAILJS_PUBLIC_KEY },
       );
       setSubmitted(true);
     } catch (err: any) {
       console.error("EmailJS error:", err?.status, err?.text, err);
       setError(
-        "Something went wrong, your message could not be sent. Please try again."
+        "Something went wrong, your message could not be sent. Please try again.",
       );
     } finally {
       setSending(false);
@@ -113,44 +113,49 @@ export default function ContactUs({ onClose }: { onClose?: () => void }) {
   if (submitted) {
     return (
       <div className="mx-auto w-full max-w-xl px-4 py-10 sm:py-14">
-        <div className="flex flex-col items-center rounded-2xl bg-white px-6 py-16 text-center shadow-[0_2px_40px_rgba(0,0,0,0.06)] sm:px-10">
-        <div
-          className="mb-6 flex h-16 w-16 items-center justify-center rounded-full"
-          style={{ backgroundColor: TEAL_LIGHT }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
+        <div className="flex flex-col items-center rounded-2xl bg-[#FFEBD9] px-6 py-16 text-center shadow-[0_2px_40px_rgba(0,0,0,0.06)] sm:px-10">
+          <div
+            className="mb-6 flex h-16 w-16 items-center justify-center rounded-full"
+            style={{ backgroundColor: TEAL_LIGHT }}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h2 className="text-2xl font-bold text-gray-700 sm:text-3xl">
-          Thank you!
-        </h2>
-        <p className="mt-3 text-lg" style={{ color: SUB }}>
-          Sandra or Val will give you a call very soon!
-        </p>
-        <Link
-          href="/"
-          className="mt-8 inline-flex items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
-          style={{ backgroundColor: TEAL }}
-        >
-          Back to Home
-        </Link>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 text-gray-700"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
+          <h2 className="text-2xl font-bold text-gray-700 sm:text-3xl">
+            Thank you!
+          </h2>
+          <p className="mt-3 text-lg" style={{ color: SUB }}>
+            Sandra or Val will give you a call very soon!
+          </p>
+          <Link
+            href="/"
+            className="mt-8 inline-flex items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+            style={{ backgroundColor: TEAL }}
+          >
+            Back to Home
+          </Link>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="mx-auto w-full max-w-2xl px-4 py-10 sm:py-14">
-      <div className="overflow-hidden rounded-2xl bg-white shadow-[0_2px_40px_rgba(0,0,0,0.06)] ring-1 ring-black/5">
-        {/* <div className="px-6 py-7 sm:px-10 sm:py-8" style={{ backgroundColor: TEAL_PALE }}>
+    <div className="bg-[#FFEBD9]">
+      <div className="mx-auto w-full max-w-2xl px-4 py-10 sm:py-14 bg-white">
+        <div className="overflow-hidden rounded-2xl shadow-[0_2px_40px_rgba(0,0,0,0.06)] ring-1 ring-black/5">
+          {/* <div className="px-6 py-7 sm:px-10 sm:py-8" style={{ backgroundColor: TEAL_PALE }}>
           <h2 className="text-xl font-bold text-gray-700 sm:text-2xl">
             Tell us about your group
           </h2>
@@ -160,253 +165,266 @@ export default function ContactUs({ onClose }: { onClose?: () => void }) {
           </p>
         </div> */}
 
-        <form onSubmit={handleSubmit} className="px-6 py-8 sm:px-10 sm:py-9">
-          {/* Step 1 — Contact details */}
-          <SectionHeading step="1" title="Your details" />
-          <div className="flex flex-col gap-5">
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <div>
-                <label className={labelClass}>Full Name</label>
-                <input
-                  type="text"
-                  required
-                  className={inputClass}
-                  value={form.full_name}
-                  onChange={(e) => updateField("full_name", e.target.value)}
-                />
-              </div>
-              <div>
-                <label className={labelClass}>Group / Company / Organisation</label>
-                <input
-                  type="text"
-                  className={inputClass}
-                  value={form.group_name}
-                  onChange={(e) => updateField("group_name", e.target.value)}
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className={labelClass}>Location</label>
-              <input
-                type="text"
-                className={inputClass}
-                value={form.location}
-                onChange={(e) => updateField("location", e.target.value)}
-              />
-            </div>
-
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <div>
-                <label className={labelClass}>Phone Number</label>
-                <input
-                  type="tel"
-                  required
-                  className={inputClass}
-                  value={form.phone}
-                  onChange={(e) => updateField("phone", e.target.value)}
-                />
-              </div>
-              <div>
-                <label className={labelClass}>Best time to call</label>
-                <input
-                  type="text"
-                  placeholder="e.g. Weekday mornings"
-                  className={inputClass}
-                  value={form.best_time}
-                  onChange={(e) => updateField("best_time", e.target.value)}
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className={labelClass}>Email</label>
-              <input
-                type="email"
-                required
-                className={inputClass}
-                value={form.email}
-                onChange={(e) => updateField("email", e.target.value)}
-              />
-            </div>
-          </div>
-
-          <hr className="my-8 border-gray-100" />
-
-          {/* Step 2 — Event details */}
-          <SectionHeading step="2" title="Your event" />
-          <div className="flex flex-col gap-5">
-            <div>
-              <label className={labelClass}>
-                What date do you have in mind? (or date range)
-              </label>
-              <input
-                type="text"
-                placeholder="e.g. 12 August 2026, or a range of dates"
-                className={inputClass}
-                value={form.event_date}
-                onChange={(e) => updateField("event_date", e.target.value)}
-              />
-              <p className="mt-1.5 text-xs text-gray-400">
-                Please allow for manual entry here — no calendar picker.
-              </p>
-            </div>
-
-            {/* Venue */}
-            <div>
-              <label className={labelClass + " mb-2"}>
-                Where do you wish to host your group?
-              </label>
-              <div className="flex flex-col gap-2.5">
-                <label
-                  className="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-200 px-4 py-3 text-sm text-gray-600 transition hover:border-[#F2711C]/50"
-                  style={
-                    venue === "your"
-                      ? { borderColor: TEAL, backgroundColor: TEAL_PALE }
-                      : undefined
-                  }
-                >
+          <form onSubmit={handleSubmit} className="px-6 py-8 sm:px-10 sm:py-9">
+            {/* Step 1 — Contact details */}
+            <SectionHeading step="1" title="Your details" />
+            <div className="flex flex-col gap-5">
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div>
+                  <label className={labelClass}>Full Name</label>
                   <input
-                    type="radio"
-                    name="venue"
-                    value="your"
-                    checked={venue === "your"}
-                    onChange={() => setVenue("your")}
-                    className="mt-0.5 h-4 w-4 accent-[#F2711C]"
+                    type="text"
+                    required
+                    className={inputClass}
+                    value={form.full_name}
+                    onChange={(e) => updateField("full_name", e.target.value)}
                   />
-                  <span>Your Venue</span>
-                </label>
-                <label
-                  className="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-200 px-4 py-3 text-sm text-gray-600 transition hover:border-[#F2711C]/50"
-                  style={
-                    venue === "offsite"
-                      ? { borderColor: TEAL, backgroundColor: TEAL_PALE }
-                      : undefined
-                  }
-                >
-                  <input
-                    type="radio"
-                    name="venue"
-                    value="offsite"
-                    checked={venue === "offsite"}
-                    onChange={() => setVenue("offsite")}
-                    className="mt-0.5 h-4 w-4 accent-[#F2711C]"
-                  />
-                  <span>
-                    Off-site at a nearby accessible park, hall or other location
-                  </span>
-                </label>
-              </div>
-
-              {venue === "offsite" && (
-                <div className="mt-3 rounded-lg p-4" style={{ backgroundColor: TEAL_PALE }}>
+                </div>
+                <div>
                   <label className={labelClass}>
-                    Do you have a place in mind, or do you wish us to find one for
-                    you?
+                    Group / Company / Organisation
                   </label>
                   <input
                     type="text"
                     className={inputClass}
-                    value={form.offsite_place}
-                    onChange={(e) => updateField("offsite_place", e.target.value)}
+                    value={form.group_name}
+                    onChange={(e) => updateField("group_name", e.target.value)}
                   />
-                  <p className="mt-1.5 text-xs" style={{ color: SUB }}>
-                    Please note that we do not organise transport. You must
-                    organise this yourself.
-                  </p>
                 </div>
-              )}
-            </div>
-
-            <div>
-              <label className={labelClass}>Number of expected participants</label>
-              <input
-                type="number"
-                min={1}
-                className={inputClass}
-                value={form.participants}
-                onChange={(e) => updateField("participants", e.target.value)}
-              />
-              <p className="mt-1.5 text-xs text-gray-400">
-                Please note our minimum numbers apply — see Pricing for details.
-              </p>
-            </div>
-
-            {/* Themed event */}
-            <div>
-              <label className={labelClass + " mb-2"}>
-                Do you wish to have a themed event?
-              </label>
-              <div className="flex gap-3">
-                <label
-                  className="flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-lg border border-gray-200 px-4 py-2.5 text-sm font-medium text-gray-600 transition hover:border-[#F2711C]/50"
-                  style={
-                    themed === "yes"
-                      ? { borderColor: TEAL, backgroundColor: TEAL_PALE }
-                      : undefined
-                  }
-                >
-                  <input
-                    type="radio"
-                    name="themed"
-                    value="yes"
-                    checked={themed === "yes"}
-                    onChange={() => setThemed("yes")}
-                    className="h-4 w-4 accent-[#F2711C]"
-                  />
-                  Yes
-                </label>
-                <label
-                  className="flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-lg border border-gray-200 px-4 py-2.5 text-sm font-medium text-gray-600 transition hover:border-[#F2711C]/50"
-                  style={
-                    themed === "no"
-                      ? { borderColor: TEAL, backgroundColor: TEAL_PALE }
-                      : undefined
-                  }
-                >
-                  <input
-                    type="radio"
-                    name="themed"
-                    value="no"
-                    checked={themed === "no"}
-                    onChange={() => setThemed("no")}
-                    className="h-4 w-4 accent-[#F2711C]"
-                  />
-                  No
-                </label>
               </div>
-              <p className="mt-1.5 text-xs text-gray-400">
-                Please note pricing is different to normal excursions/incursions.
+
+              <div>
+                <label className={labelClass}>Location</label>
+                <input
+                  type="text"
+                  className={inputClass}
+                  value={form.location}
+                  onChange={(e) => updateField("location", e.target.value)}
+                />
+              </div>
+
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div>
+                  <label className={labelClass}>Phone Number</label>
+                  <input
+                    type="tel"
+                    required
+                    className={inputClass}
+                    value={form.phone}
+                    onChange={(e) => updateField("phone", e.target.value)}
+                  />
+                </div>
+                <div>
+                  <label className={labelClass}>Best time to call</label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Weekday mornings"
+                    className={inputClass}
+                    value={form.best_time}
+                    onChange={(e) => updateField("best_time", e.target.value)}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className={labelClass}>Email</label>
+                <input
+                  type="email"
+                  required
+                  className={inputClass}
+                  value={form.email}
+                  onChange={(e) => updateField("email", e.target.value)}
+                />
+              </div>
+            </div>
+
+            <hr className="my-8 border-gray-100" />
+
+            {/* Step 2 — Event details */}
+            <SectionHeading step="2" title="Your event" />
+            <div className="flex flex-col gap-5">
+              <div>
+                <label className={labelClass}>
+                  What date do you have in mind? (or date range)
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. 12 August 2026, or a range of dates"
+                  className={inputClass}
+                  value={form.event_date}
+                  onChange={(e) => updateField("event_date", e.target.value)}
+                />
+                <p className="mt-1.5 text-xs text-gray-400">
+                  Please allow for manual entry here — no calendar picker.
+                </p>
+              </div>
+
+              {/* Venue */}
+              <div>
+                <label className={labelClass + " mb-2"}>
+                  Where do you wish to host your group?
+                </label>
+                <div className="flex flex-col gap-2.5">
+                  <label
+                    className="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-200 px-4 py-3 text-sm text-gray-600 transition hover:border-[#F2711C]/50"
+                    style={
+                      venue === "your"
+                        ? { borderColor: TEAL, backgroundColor: TEAL_PALE }
+                        : undefined
+                    }
+                  >
+                    <input
+                      type="radio"
+                      name="venue"
+                      value="your"
+                      checked={venue === "your"}
+                      onChange={() => setVenue("your")}
+                      className="mt-0.5 h-4 w-4 accent-[#F2711C]"
+                    />
+                    <span>Your Venue</span>
+                  </label>
+                  <label
+                    className="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-200 px-4 py-3 text-sm text-gray-600 transition hover:border-[#F2711C]/50"
+                    style={
+                      venue === "offsite"
+                        ? { borderColor: TEAL, backgroundColor: TEAL_PALE }
+                        : undefined
+                    }
+                  >
+                    <input
+                      type="radio"
+                      name="venue"
+                      value="offsite"
+                      checked={venue === "offsite"}
+                      onChange={() => setVenue("offsite")}
+                      className="mt-0.5 h-4 w-4 accent-[#F2711C]"
+                    />
+                    <span>
+                      Off-site at a nearby accessible park, hall or other
+                      location
+                    </span>
+                  </label>
+                </div>
+
+                {venue === "offsite" && (
+                  <div
+                    className="mt-3 rounded-lg p-4"
+                    style={{ backgroundColor: TEAL_PALE }}
+                  >
+                    <label className={labelClass}>
+                      Do you have a place in mind, or do you wish us to find one
+                      for you?
+                    </label>
+                    <input
+                      type="text"
+                      className={inputClass}
+                      value={form.offsite_place}
+                      onChange={(e) =>
+                        updateField("offsite_place", e.target.value)
+                      }
+                    />
+                    <p className="mt-1.5 text-xs" style={{ color: SUB }}>
+                      Please note that we do not organise transport. You must
+                      organise this yourself.
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <label className={labelClass}>
+                  Number of expected participants
+                </label>
+                <input
+                  type="number"
+                  min={1}
+                  className={inputClass}
+                  value={form.participants}
+                  onChange={(e) => updateField("participants", e.target.value)}
+                />
+                <p className="mt-1.5 text-xs text-gray-400">
+                  Please note our minimum numbers apply — see Pricing for
+                  details.
+                </p>
+              </div>
+
+              {/* Themed event */}
+              <div>
+                <label className={labelClass + " mb-2"}>
+                  Do you wish to have a themed event?
+                </label>
+                <div className="flex gap-3">
+                  <label
+                    className="flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-lg border border-gray-200 px-4 py-2.5 text-sm font-medium text-gray-600 transition hover:border-[#F2711C]/50"
+                    style={
+                      themed === "yes"
+                        ? { borderColor: TEAL, backgroundColor: TEAL_PALE }
+                        : undefined
+                    }
+                  >
+                    <input
+                      type="radio"
+                      name="themed"
+                      value="yes"
+                      checked={themed === "yes"}
+                      onChange={() => setThemed("yes")}
+                      className="h-4 w-4 accent-[#F2711C]"
+                    />
+                    Yes
+                  </label>
+                  <label
+                    className="flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-lg border border-gray-200 px-4 py-2.5 text-sm font-medium text-gray-600 transition hover:border-[#F2711C]/50"
+                    style={
+                      themed === "no"
+                        ? { borderColor: TEAL, backgroundColor: TEAL_PALE }
+                        : undefined
+                    }
+                  >
+                    <input
+                      type="radio"
+                      name="themed"
+                      value="no"
+                      checked={themed === "no"}
+                      onChange={() => setThemed("no")}
+                      className="h-4 w-4 accent-[#F2711C]"
+                    />
+                    No
+                  </label>
+                </div>
+                <p className="mt-1.5 text-xs text-gray-400">
+                  Please note pricing is different to normal
+                  excursions/incursions.
+                </p>
+              </div>
+
+              <div>
+                <label className={labelClass}>How did you hear about us?</label>
+                <input
+                  type="text"
+                  className={inputClass}
+                  value={form.source}
+                  onChange={(e) => updateField("source", e.target.value)}
+                />
+              </div>
+            </div>
+
+            {error && (
+              <p className="mt-4 rounded-lg bg-red-50 px-4 py-2.5 text-sm text-red-600">
+                {error}
               </p>
-            </div>
+            )}
 
-            <div>
-              <label className={labelClass}>How did you hear about us?</label>
-              <input
-                type="text"
-                className={inputClass}
-                value={form.source}
-                onChange={(e) => updateField("source", e.target.value)}
-              />
-            </div>
-          </div>
-
-          {error && (
-            <p className="mt-4 rounded-lg bg-red-50 px-4 py-2.5 text-sm text-red-600">
-              {error}
-            </p>
-          )}
-
-          {/* Submit */}
-          <button
-            type="submit"
-            disabled={sending}
-            className="mt-9 inline-flex w-full items-center justify-center rounded-lg px-8 py-3.5 text-base font-semibold text-white shadow-sm transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
-            style={{ backgroundColor: TEAL }}
-          >
-            {sending ? "Sending..." : "Submit"}
-          </button>
-        </form>
+            {/* Submit */}
+            <button
+              type="submit"
+              disabled={sending}
+              className="mt-9 inline-flex w-full items-center justify-center rounded-lg px-8 py-3.5 text-base font-semibold text-white shadow-sm transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+              style={{ backgroundColor: TEAL }}
+            >
+              {sending ? "Sending..." : "Submit"}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
