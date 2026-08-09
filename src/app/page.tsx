@@ -116,7 +116,7 @@ export default function Home() {
 
         <div className="relative z-20 mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
           <div className="max-w-xl">
-            <h1 className="text-xl lg:text-4xl font-extrabold italic leading-tight tracking-tight text-[#FF9A4D] drop-shadow-[0_3px_8px_rgba(0,0,0,0.55)] sm:text-5xl md:text-6xl">
+            <h1 className="text-xl text-nowrap lg:text-4xl font-extrabold italic leading-tight tracking-tight text-[#FF9A4D] drop-shadow-[0_3px_8px_rgba(0,0,0,0.55)] sm:text-5xl md:text-6xl">
               Your Love, Our Care
             </h1>
           </div>
