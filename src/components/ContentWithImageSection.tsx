@@ -112,8 +112,8 @@ export default function ContentWithImageSection({
         </div>
 
         {/* Right: image full width & height, centered */}
-        <div className="relative flex h-[280px] w-full items-center justify-center pb-12 sm:h-[350px] sm:pb-16 lg:h-[500px] lg:pb-24">
-          <div className="relative h-full w-full">
+        <div className="relative flex h-[280px] px-7 lg:px-0 w-full items-center justify-center pb-12 sm:h-[350px] sm:pb-16 lg:h-[500px] lg:pb-24">
+          <div className="relative h-full w-full ">
             <div className="relative z-10 h-full w-full overflow-hidden rounded-4xl ">
               <Image
                 src={imageSrc}

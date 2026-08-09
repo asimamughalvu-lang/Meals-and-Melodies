@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen font-sans">
-      <section className="relative flex min-h-[60vh] bg-[#FFEBD9] w-full items-center overflow-hidden  sm:min-h-[75vh] md:min-h-[90vh]">
+      <section className="relative flex min-h-[60vh] lg:h-[100vh] bg-[#FFEBD9] w-full items-center overflow-hidden  sm:min-h-[75vh] md:min-h-[90vh]">
         {!videoLoadFailed ? (
           <video
             key={HERO_VIDEO_SRC}
@@ -112,7 +112,7 @@ export default function Home() {
         ) : null}
 
         {/* Scrim so the heading stays readable over any video frame */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-0 z-10  to-transparent" />
 
         <div className="relative z-20 mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
           <div className="max-w-xl">

@@ -98,7 +98,7 @@ export default function PricingPage() {
               key={plan.title}
               className={`rounded-3xl border p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:p-8 ${
                 plan.featured
-                  ? "border-[#F2711C] bg-[#F2711C]/5"
+                  ? "border-zinc-200 bg-white"
                   : "border-zinc-200 bg-white"
               }`}
             >

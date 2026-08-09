@@ -27,8 +27,8 @@ function SectionHeading({ step, title }: { step: string; title: string }) {
   return (
     <div className="mb-4 flex items-center gap-3">
       <span
-        className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold text-white"
-        style={{ backgroundColor: TEAL }}
+        className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
+        // style={{ backgroundColor: TEAL }}
       >
         {step}
       </span>
@@ -113,7 +113,7 @@ export default function ContactUs({ onClose }: { onClose?: () => void }) {
   if (submitted) {
     return (
       <div className="mx-auto w-full max-w-xl px-4 py-10 sm:py-14">
-        <div className="flex flex-col items-center rounded-2xl bg-[#FFEBD9] px-6 py-16 text-center shadow-[0_2px_40px_rgba(0,0,0,0.06)] sm:px-10">
+        <div className="flex flex-col items-center rounded-2xl px-6 py-16 text-center shadow-[0_2px_40px_rgba(0,0,0,0.06)] sm:px-10">
           <div
             className="mb-6 flex h-16 w-16 items-center justify-center rounded-full"
             style={{ backgroundColor: TEAL_LIGHT }}
@@ -165,9 +165,9 @@ export default function ContactUs({ onClose }: { onClose?: () => void }) {
           </p>
         </div> */}
 
-          <form onSubmit={handleSubmit} className="px-6 py-8 sm:px-10 sm:py-9">
+          <form onSubmit={handleSubmit} className="px-6 py-8 sm:px-10  sm:py-9">
             {/* Step 1 — Contact details */}
-            <SectionHeading step="1" title="Your details" />
+            <SectionHeading step="1" title="Your details bg-white my-20" />
             <div className="flex flex-col gap-5">
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div>

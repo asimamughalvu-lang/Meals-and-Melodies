@@ -59,7 +59,7 @@ export default function FaqsSection({
   };
 
   return (
-    <section className="w-full bg-[#FFEBD9] px-4 py-10 dark:border-zinc-800 dark:bg-zinc-950 sm:px-6 sm:py-16">
+    <section className="w-full bg-[#FFEBD9]  py-10 dark:border-zinc-800 dark:bg-zinc-950 sm:px-10 sm:py-16">
       <div className="mx-auto max-w-6xl py-10 sm:px-8 sm:py-16 md:py-20 lg:px-12">
         <h2 className="text-center text-2xl font-bold tracking-tight text-[#F2711C] dark:text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-[66px]">
           {heading}
@@ -76,7 +76,7 @@ export default function FaqsSection({
                 <button
                   type="button"
                   onClick={() => toggle(i)}
-                  className="flex w-full items-center justify-between gap-3 px-3 py-6 text-left hover:bg-gray-50 sm:gap-4 sm:py-8 md:py-10"
+                  className="flex w-full items-center justify-between gap-3 px-3  lg:px-10  py-6 text-left hover:bg-gray-50 sm:gap-4 sm:py-8 md:py-10"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${i}`}
                   id={`faq-question-${i}`}
